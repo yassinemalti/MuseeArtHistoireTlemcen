@@ -54,8 +54,7 @@ public class PresentationFragment extends Fragment {
         AdRequest request_0_2 = new AdRequest.Builder().build();
         adBanner_0_2.loadAd(request_0_2);
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_presentation, container, false);
+        return rootView;
     }
 
     public void onButtonPressed(Uri uri) {

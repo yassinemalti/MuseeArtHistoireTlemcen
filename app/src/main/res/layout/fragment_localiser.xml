@@ -5,37 +5,51 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.LocaliserFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-        <TextView
-            android:text="تحديد الموقع"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/textView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textAlignment="center"
-            android:gravity="center_vertical"/>
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
 
-        <TextView
-            android:text="شارع أوت تلمسان"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:id="@+id/textViewAdresse"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:gravity="center_vertical"
-            android:paddingRight="20dp"
-            android:textSize="14sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapfragment"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+                <TextView
+                    android:text="تحديد الموقع"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/textView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"/>
 
-    </LinearLayout>
+                <TextView
+                    android:text="شارع أوت تلمسان"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/textViewAdresse"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:gravity="center_vertical"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"/>
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapfragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="280dp"

@@ -5,49 +5,48 @@
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.PresentationFragment">
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/ScrollView01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout01"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/musee_small" />
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
 
-    <TextView
-        android:id="@+id/textViewAdresse1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:paddingRight="20dp"
-        android:text="يقع المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان وسط مدينة تلمسان وقد حظي هذا الموقع بأهمية كبيرة عبر العصور، فقد كان جزءا من المدرسة التي بناها السلطان الزياني أبو تاشفين.  (718-737) هـ / (1318-1337) م والتي عرفت بالمدرسة الجديدة أو المدرسة التاشفينية و التي كانت تحفة معمارية رائعة، فقد أراد لها السلطان أن تكون بمقام جامع القرويين بفاس والقيروان بتونس، لكن أتت عليها الآلة الإستعمارية حيث قامت الإدارة الاستعمارية بهدم المدرسة التاشفينية و بناء دار البلدية وساحة عمومية سنة 1875 م في إطار التهيئة العمرانية الجديدة التي دمرت واحدا من أهم المعالم الأثرية في العالم الإسلامي. وبموجب المرسوم التنفيذي رقم 12-196 المؤرخ في 3 جمادى الثانية عام 1433 هـ الموافق ل 25 أبريل سنة 2012م تم إنشاء المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان."
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textViewAdresse2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingRight="20dp"
-            android:text="يقع المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان وسط مدينة تلمسان وقد حظي هذا الموقع بأهمية كبيرة عبر العصور، فقد كان جزءا من المدرسة التي بناها السلطان الزياني أبو تاشفين.  (718-737) هـ / (1318-1337) م والتي عرفت بالمدرسة الجديدة أو المدرسة التاشفينية و التي كانت تحفة معمارية رائعة، فقد أراد لها السلطان أن تكون بمقام جامع القرويين بفاس والقيروان بتونس، لكن أتت عليها الآلة الإستعمارية حيث قامت الإدارة الاستعمارية بهدم المدرسة التاشفينية و بناء دار البلدية وساحة عمومية سنة 1875 م في إطار التهيئة العمرانية الجديدة التي دمرت واحدا من أهم المعالم الأثرية في العالم الإسلامي. وبموجب المرسوم التنفيذي رقم 12-196 المؤرخ في 3 جمادى الثانية عام 1433 هـ الموافق ل 25 أبريل سنة 2012م تم إنشاء المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان."
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/musee_small" />
 
+                <TextView
+                    android:id="@+id/textViewPresentation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="100dp"
+                    android:text="يقع المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان وسط مدينة تلمسان وقد حظي هذا الموقع بأهمية كبيرة عبر العصور، فقد كان جزءا من المدرسة التي بناها السلطان الزياني أبو تاشفين.  (718-737) هـ / (1318-1337) م والتي عرفت بالمدرسة الجديدة أو المدرسة التاشفينية و التي كانت تحفة معمارية رائعة، فقد أراد لها السلطان أن تكون بمقام جامع القرويين بفاس والقيروان بتونس، لكن أتت عليها الآلة الإستعمارية حيث قامت الإدارة الاستعمارية بهدم المدرسة التاشفينية و بناء دار البلدية وساحة عمومية سنة 1875 م في إطار التهيئة العمرانية الجديدة التي دمرت واحدا من أهم المعالم الأثرية في العالم الإسلامي. وبموجب المرسوم التنفيذي رقم 12-196 المؤرخ في 3 جمادى الثانية عام 1433 هـ الموافق ل 25 أبريل سنة 2012م تم إنشاء المتحف العمومي الوطني للفن والتاريخ لمدينة تلمسان."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="14sp" />
 
-    </LinearLayout>
-    </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </ScrollView>
+
     <LinearLayout
         android:layout_width="280dp"
         android:layout_height="70dp"
@@ -63,4 +62,5 @@
             ads:adUnitId="ca-app-pub-2326345806005611/6041337285"
             ads:adSize="280x70"/>
     </LinearLayout>
+
 </FrameLayout>

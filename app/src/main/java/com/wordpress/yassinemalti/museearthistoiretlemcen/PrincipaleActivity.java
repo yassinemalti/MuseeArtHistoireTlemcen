@@ -1,5 +1,6 @@
 package com.wordpress.yassinemalti.museearthistoiretlemcen;
 
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +29,7 @@ public class PrincipaleActivity extends AppCompatActivity
 
     private boolean viewIsAtHome;
     boolean doubleBackToExitPressedOnce = false;
+    private int currentViewID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,17 +65,19 @@ public class PrincipaleActivity extends AppCompatActivity
             navigationView.setCheckedItem(R.id.accueil);
             displayView(R.id.accueil);
         } else {
-            if (doubleBackToExitPressedOnce)
+            if (doubleBackToExitPressedOnce){
                 moveTaskToBack(true);
-            this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(this, "الرجاء الضغط مرة أخرى للخروج", Toast.LENGTH_SHORT).show();
+            } else {
+                this.doubleBackToExitPressedOnce = true;
+                Toast.makeText(this, "الرجاء الضغط مرة أخرى للخروج", Toast.LENGTH_SHORT).show();
 
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    doubleBackToExitPressedOnce = false;
-                }
-            }, 2000);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        doubleBackToExitPressedOnce = false;
+                    }
+                }, 2000);
+            }
         }
     }
 
@@ -98,6 +102,7 @@ public class PrincipaleActivity extends AppCompatActivity
 
         Fragment fragment = null;
         String title = getString(R.string.app_name);
+        currentViewID = viewId;
 
         switch (viewId) {
             case R.id.accueil:
@@ -162,6 +167,17 @@ public class PrincipaleActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(currentViewID);
+        displayView(currentViewID);
 
     }
 }
