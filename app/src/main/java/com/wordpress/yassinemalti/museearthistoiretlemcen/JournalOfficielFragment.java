@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+
 public class JournalOfficielFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
@@ -43,8 +46,13 @@ public class JournalOfficielFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_journal_officiel, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_journal_officiel, container, false);
+        NativeExpressAdView adBanner_4 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_4);
+        AdRequest request_4 = new AdRequest.Builder().build();
+        adBanner_4.loadAd(request_4);
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

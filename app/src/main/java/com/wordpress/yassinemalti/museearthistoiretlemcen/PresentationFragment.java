@@ -50,9 +50,9 @@ public class PresentationFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_presentation, container, false);
-        NativeExpressAdView adBanner_0_2 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_0_2);
-        AdRequest request_0_2 = new AdRequest.Builder().build();
-        adBanner_0_2.loadAd(request_0_2);
+        NativeExpressAdView adBanner_2 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_2);
+        AdRequest request_2 = new AdRequest.Builder().build();
+        adBanner_2.loadAd(request_2);
 
         return rootView;
     }

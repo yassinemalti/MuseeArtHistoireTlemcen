@@ -64,9 +64,9 @@ public class LocaliserFragment extends Fragment {
         mMapView.onCreate(savedInstanceState);
         mMapView.onResume();
 
-        NativeExpressAdView adBanner_0_6 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_0_6);
-        AdRequest request_0_6 = new AdRequest.Builder().build();
-        adBanner_0_6.loadAd(request_0_6);
+        NativeExpressAdView adBanner_7 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_7);
+        AdRequest request_7 = new AdRequest.Builder().build();
+        adBanner_7.loadAd(request_7);
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());

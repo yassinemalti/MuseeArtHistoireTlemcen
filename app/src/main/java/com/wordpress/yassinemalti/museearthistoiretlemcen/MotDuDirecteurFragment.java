@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+
 public class MotDuDirecteurFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,8 +48,13 @@ public class MotDuDirecteurFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mot_du_directeur, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_mot_du_directeur, container, false);
+        NativeExpressAdView adBanner_3 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_3);
+        AdRequest request_3 = new AdRequest.Builder().build();
+        adBanner_3.loadAd(request_3);
+
+        return rootView;
     }
 
     public void onButtonPressed(Uri uri) {

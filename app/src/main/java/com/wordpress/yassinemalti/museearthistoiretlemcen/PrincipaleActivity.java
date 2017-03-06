@@ -17,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class PrincipaleActivity extends AppCompatActivity
         implements  NavigationView.OnNavigationItemSelectedListener,
                     AccueilFragment.OnFragmentInteractionListener,

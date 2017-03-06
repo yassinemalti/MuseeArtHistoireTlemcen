@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+
 public class AccueilFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,7 +48,13 @@ public class AccueilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_accueil, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_accueil, container, false);
+        NativeExpressAdView adBanner_1 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_1);
+        AdRequest request_1 = new AdRequest.Builder().build();
+        adBanner_1.loadAd(request_1);
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

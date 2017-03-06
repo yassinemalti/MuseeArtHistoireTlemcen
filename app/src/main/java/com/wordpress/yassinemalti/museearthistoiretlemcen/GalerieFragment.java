@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+
 public class GalerieFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
@@ -43,8 +46,13 @@ public class GalerieFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_galerie, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_galerie, container, false);
+        NativeExpressAdView adBanner_5 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_5);
+        AdRequest request_5 = new AdRequest.Builder().build();
+        adBanner_5.loadAd(request_5);
+
+        return rootView;
     }
 
     public void onButtonPressed(Uri uri) {

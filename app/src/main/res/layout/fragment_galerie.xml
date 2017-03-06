@@ -2,15 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.GalerieFragment">
 
-    <TextView
-        android:text="صور للمتحف"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textAlignment="center"
-        android:gravity="center_vertical"/>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="صور للمتحف"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/textView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <com.google.android.gms.ads.NativeExpressAdView
+            android:id="@+id/adBanner_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ads:adUnitId="ca-app-pub-2326345806005611/1471536885"
+            ads:adSize="280x70"/>
+    </LinearLayout>
 
 </FrameLayout>
