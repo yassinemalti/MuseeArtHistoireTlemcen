@@ -12,5 +12,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textAlignment="center"
         android:gravity="center_vertical"/>
+    <TextView
+        android:text=" بنا"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAlignment="center"
+        android:gravity="center_vertical"/>
 
 </FrameLayout>
