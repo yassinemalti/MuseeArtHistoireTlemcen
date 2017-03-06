@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "1071377179094",
+    "firebase_url": "https://musee-art-histoire-tlemcen.firebaseio.com",
+    "project_id": "musee-art-histoire-tlemcen",
+    "storage_bucket": "musee-art-histoire-tlemcen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071377179094:android:41c963cbd007ffdd",
+        "android_client_info": {
+          "package_name": "com.wordpress.yassinemalti.museearthistoiretlemcen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071377179094-tc2biiaqq3cn1u50sbhj3p144a07la47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcYXCYKcQfkvfxgyI3sqRVRZ3H9D4KymY"
+        },
+        {
+          "current_key": "AIzaSyDgvPBCAgjXeMogbNLWB-Zv0staYcsnbCs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
