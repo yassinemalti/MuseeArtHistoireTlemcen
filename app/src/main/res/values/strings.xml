@@ -3,15 +3,7 @@
     <string name="title_activity_main">متحف الفن و التاريخ لمدينة تلمسان</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_settings">Settings</string>
-    <string name="impossible_game">Impossible Game</string>
-    <string name="retry_button_text">Retry</string>
-    <string name="watch_video_button_text">Watch Video for 10 additional coins</string>
-    <string name="default_coin_text">Coins: 0</string>
-    <string name="ad_unit_id">ca-app-pub-2326345806005611/9053679289</string>
     <string name="title_activity_settings">Settings</string>
-
-    <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
@@ -82,6 +74,12 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="txtCredits">Support: <a href="http://www.stackoverflow.com">click here</a></string>
+    <string name="textViewLienJournalOfficiel_1"><a href="http://mahtlemcen.org/images/journalofficiel/A2010016.pdf">الجريدة الرسمية العدد 16 لسنة 2010</a></string>
+    <string name="textViewLienJournalOfficiel_2"><a href="http://mahtlemcen.org/images/journalofficiel/A2011056.pdf">الجريدة الرسمية العدد 56 لسنة 2011</a></string>
+    <string name="textViewLienJournalOfficiel_3"><a href="http://mahtlemcen.org/images/journalofficiel/A2012026.pdf">الجريدة الرسمية العدد 26 لسنة 2012</a></string>
+    <string name="textViewLienJournalOfficiel_4"><a href="http://mahtlemcen.org/images/journalofficiel/A2013004.pdf">الجريدة الرسمية العدد 04 لسنة 2013</a></string>
+    <string name="textViewLienJournalOfficiel_5"><a href="http://mahtlemcen.org/images/journalofficiel/A2013022.pdf">الجريدة الرسمية العدد 22 لسنة 2013</a></string>
+    <string name="textViewLienJournalOfficiel_6"><a href="http://mahtlemcen.org/images/journalofficiel/A2013051.pdf">الجريدة الرسمية العدد 51 لسنة 2013</a></string>
+    <string name="textViewLienJournalOfficiel_7"><a href="http://mahtlemcen.org/images/journalofficiel/A2015012.pdf">الجريدة الرسمية العدد 12 لسنة 2015</a></string>
 
 </resources>

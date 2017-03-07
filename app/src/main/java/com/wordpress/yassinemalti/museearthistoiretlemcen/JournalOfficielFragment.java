@@ -54,8 +54,26 @@ public class JournalOfficielFragment extends Fragment {
         AdRequest request_4 = new AdRequest.Builder().build();
         adBanner_4.loadAd(request_4);
 
-        TextView t2 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_1);
+        TextView t1 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_1);
+        t1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t2 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_2);
         t2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t3 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_3);
+        t3.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t4 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_4);
+        t4.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t5 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_5);
+        t5.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t6 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_6);
+        t6.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView t7 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_7);
+        t7.setMovementMethod(LinkMovementMethod.getInstance());
 
         return rootView;
     }
