@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.JournalOfficielFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,14 +21,28 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/journalofficiel" />
+
                 <TextView
-                    android:text="الجريدة الرسمية"
+                    android:id="@+id/textViewLienJournalOfficiel_1"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/textView"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    android:textAlignment="center"
-                    android:gravity="center_vertical"/>
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="100dp"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:text="@string/txtCredits"
+                    android:textSize="14sp" />
+
 
             </LinearLayout>
 

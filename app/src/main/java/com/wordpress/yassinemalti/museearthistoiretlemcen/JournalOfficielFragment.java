@@ -4,9 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -51,6 +53,9 @@ public class JournalOfficielFragment extends Fragment {
         NativeExpressAdView adBanner_4 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_4);
         AdRequest request_4 = new AdRequest.Builder().build();
         adBanner_4.loadAd(request_4);
+
+        TextView t2 = (TextView) rootView.findViewById(R.id.textViewLienJournalOfficiel_1);
+        t2.setMovementMethod(LinkMovementMethod.getInstance());
 
         return rootView;
     }
