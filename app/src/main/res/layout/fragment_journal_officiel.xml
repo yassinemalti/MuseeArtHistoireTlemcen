@@ -37,6 +37,7 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
                     android:text="يمكنكم تحميل الجرائد الرسمية عبر الروابط المباشرة أدناه للإطلاع على مختلف النصوص الصادرة التي تخص تأسيس و تنظيم المتحف العمومي الوطني للفن و التاريخ"
                     android:textSize="14sp" />
 
@@ -45,7 +46,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_1"
@@ -73,7 +76,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_2"
@@ -101,7 +106,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_3"
@@ -129,7 +136,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_4"
@@ -157,7 +166,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_5"
@@ -185,7 +196,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                     <TextView
                         android:id="@+id/textViewLienJournalOfficiel_6"
@@ -213,7 +226,9 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_gravity="right"
-                    android:layoutDirection="ltr">
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp">
 
                 <TextView
                         android:id="@+id/textViewLienJournalOfficiel_7"
