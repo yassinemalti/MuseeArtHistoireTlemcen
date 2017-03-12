@@ -144,7 +144,7 @@ public class GalerieFragment extends Fragment {
 
     private void fetchImages() {
 
-        pDialog.setMessage("Downloading json...");
+        pDialog.setMessage("جاري التحميل...");
         pDialog.show();
 
         JsonArrayRequest req = new JsonArrayRequest(endpoint,

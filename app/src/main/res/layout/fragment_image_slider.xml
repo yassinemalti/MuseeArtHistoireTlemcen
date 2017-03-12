@@ -24,7 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layoutDirection="ltr"
         android:orientation="vertical"
         android:layout_marginBottom="40dp"
         android:padding="20dp">
@@ -33,6 +35,8 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layoutDirection="ltr"
             android:textColor="@android:color/white"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -41,8 +45,10 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layoutDirection="ltr"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
