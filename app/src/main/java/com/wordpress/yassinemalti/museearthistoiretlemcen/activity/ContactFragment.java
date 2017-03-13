@@ -1,12 +1,16 @@
 package com.wordpress.yassinemalti.museearthistoiretlemcen.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -55,6 +59,14 @@ public class ContactFragment extends Fragment {
         AdRequest request_6 = new AdRequest.Builder().build();
         adBanner_6.loadAd(request_6);
 
+        Button button= (Button) rootView.findViewById(R.id.buttonSend);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendEmail(v);
+            }
+        });
+
         return rootView;
     }
 
@@ -85,4 +97,27 @@ public class ContactFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    protected void sendEmail(View v) {
+
+        String[] TO = {"yassinemalti@yahoo.com"};
+        String[] CC = {"xyz@gmail.com"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "رسالة من التطبيق الرسمي");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "مضمون الرسالة");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(getActivity(),
+                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

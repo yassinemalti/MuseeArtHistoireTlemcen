@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.activity.ContactFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,13 +22,168 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="اتصل بنا"
+                    android:text="يمكنكم الاتصال معنا عبر الهاتف أو عبر مواقع التواصل الإجتماعي أو عبر البريد الالتروني أو من خلال الاستمارة أدناه"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/textView"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewAdresse"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:gravity="center_vertical"
+                    android:paddingRight="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/textViewLienJournalOfficiel_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="0021343273543"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pdf_file_document" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/textViewLienJournalOfficiel_111"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="contact@mahtlemcen.org"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pdf_file_document" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/textViewLienJournalOfficiel_1111"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="/MuseeArtHistoireTlemcen"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView211"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pdf_file_document" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="الإسم و اللقب"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="موضوع الرسالة"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="مضمون الرسالة"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonSend"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="إرسال"
                     android:textAlignment="center"
-                    android:gravity="center_vertical"/>
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/textViewPresentation2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="70dp"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
