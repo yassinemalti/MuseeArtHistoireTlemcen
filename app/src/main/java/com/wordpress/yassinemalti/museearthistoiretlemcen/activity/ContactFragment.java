@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -25,6 +26,9 @@ public class ContactFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private EditText objetEditText;
+    private EditText messageEditText;
 
     private OnFragmentInteractionListener mListener;
 
@@ -59,7 +63,10 @@ public class ContactFragment extends Fragment {
         AdRequest request_6 = new AdRequest.Builder().build();
         adBanner_6.loadAd(request_6);
 
-        Button button= (Button) rootView.findViewById(R.id.buttonSend);
+        objetEditText = (EditText) rootView.findViewById(R.id.objectEditText);
+        messageEditText = (EditText) rootView.findViewById(R.id.messageEditText);
+
+        Button button = (Button) rootView.findViewById(R.id.buttonSend);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,24 +107,26 @@ public class ContactFragment extends Fragment {
 
     protected void sendEmail(View v) {
 
-        String[] TO = {"yassinemalti@yahoo.com"};
-        String[] CC = {"xyz@gmail.com"};
+        String objectTextString = objetEditText.getText().toString();
+        String messageTextString = messageEditText.getText().toString();
+
+        String[] TO = {"contact@mahtlemcen.org"};
+        //String[] CC = {"xyz@gmail.com"};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "رسالة من التطبيق الرسمي");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "مضمون الرسالة");
+        //emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, objectTextString);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, messageTextString);
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            startActivity(Intent.createChooser(emailIntent, "اتصل بنا..."));
 
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(getActivity(),
                     "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
-
 }

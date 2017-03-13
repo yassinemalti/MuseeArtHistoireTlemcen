@@ -121,33 +121,7 @@
                 </LinearLayout>
 
                 <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="الإسم و اللقب"
-                    android:paddingRight="20dp"
-                    android:textSize="14sp"/>
-
-                <EditText
-                    android:id="@+id/editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textEmailAddress" />
-
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:paddingRight="20dp"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/objectEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -157,9 +131,9 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/messageEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="180dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="مضمون الرسالة"
