@@ -69,7 +69,6 @@ public class AccueilFragment extends Fragment {
 
         notificationTitle.setText(shortMessage);
         notificationBody.setText(longMessage);
-        Toast.makeText(getActivity(), imageUri, Toast.LENGTH_LONG).show();
         if(imageUri!=null)
             new DownloadImageTask(notificationImage).execute(imageUri);
 
