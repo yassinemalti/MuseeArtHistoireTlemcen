@@ -22,21 +22,35 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="استقبال"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:id="@+id/textView"
+                    android:layout_height="80dp"
+                    android:id="@+id/notificationTitleTextView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textAlignment="center"
-                    android:gravity="center_vertical"/>
+                    android:gravity="center_vertical"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/notificationImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="350dp"
                     android:layout_gravity="center_vertical"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/pdf_file_document" />
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notificationBodyTextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:gravity="center_vertical"
+                    android:paddingRight="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="14sp"/>
 
                 <ListView
                     android:layout_width="match_parent"

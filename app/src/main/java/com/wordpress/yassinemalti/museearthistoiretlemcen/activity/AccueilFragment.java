@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -29,10 +31,11 @@ public class AccueilFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static AccueilFragment newInstance(String notificationImageURL) {
+    public static AccueilFragment newInstance(String param1, String param2) {
         AccueilFragment fragment = new AccueilFragment();
         Bundle args = new Bundle();
-        args.putString("imageUri", notificationImageURL);
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -56,11 +59,19 @@ public class AccueilFragment extends Fragment {
         adBanner_1.loadAd(request_1);
 
         Bundle args = getArguments();
-        String notificationImageURL = args.getString("imageUri");
+        String shortMessage = args.getString("shortMessage");
+        String longMessage = args.getString("longMessage");
+        String imageUri = args.getString("imageUri");
 
-        if(notificationImageURL!=null)
-            new DownloadImageTask((ImageView) rootView.findViewById(R.id.notificationImageView))
-                    .execute(notificationImageURL);
+        TextView notificationTitle = (TextView) rootView.findViewById(R.id.notificationTitleTextView);
+        TextView notificationBody = (TextView) rootView.findViewById(R.id.notificationBodyTextView);
+        ImageView notificationImage = (ImageView) rootView.findViewById(R.id.notificationImageView);
+
+        notificationTitle.setText(shortMessage);
+        notificationBody.setText(longMessage);
+        Toast.makeText(getActivity(), imageUri, Toast.LENGTH_LONG).show();
+        if(imageUri!=null)
+            new DownloadImageTask(notificationImage).execute(imageUri);
 
         return rootView;
     }

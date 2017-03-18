@@ -33,6 +33,8 @@ public class PrincipaleActivity extends AppCompatActivity
     private boolean viewIsAtHome;
     boolean doubleBackToExitPressedOnce = false;
     private int currentViewID;
+    private String shortMessage;
+    private String longMessage;
     private String imageUri;
 
     @Override
@@ -56,11 +58,20 @@ public class PrincipaleActivity extends AppCompatActivity
         if (getIntent().getExtras() != null) {
 
             for (String key : getIntent().getExtras().keySet()) {
-                String value = getIntent().getExtras().getString(key);
-                if (key.equals("imageUri")) {
-                    imageUri = value;
-                }
 
+                String value = getIntent().getExtras().getString(key);
+
+                switch (key){
+                    case "shortMessage":
+                        shortMessage = value;
+                        break;
+                    case "longMessage":
+                        longMessage = value;
+                        break;
+                    case "imageUri":
+                        imageUri = value;
+                        break;
+                }
             }
         }
 
@@ -125,6 +136,8 @@ public class PrincipaleActivity extends AppCompatActivity
             case R.id.accueil:
                 fragment = new AccueilFragment();
                 Bundle args = new Bundle();
+                args.putString("shortMessage", shortMessage);
+                args.putString("longMessage", longMessage);
                 args.putString("imageUri", imageUri);
                 fragment.setArguments(args);
                 title  = "استقبال";

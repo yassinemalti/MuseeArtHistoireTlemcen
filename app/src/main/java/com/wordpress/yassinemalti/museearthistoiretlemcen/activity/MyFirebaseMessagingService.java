@@ -35,9 +35,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         Intent intent = new Intent(this, PrincipaleActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("shortMessage", shortMessageBody);
+        intent.putExtra("longMessage", longMessageBody);
         intent.putExtra("imageUri", imageUri);
-        intent.putExtra("shortMessageBody", shortMessageBody);
-        intent.putExtra("longMessageBody", longMessageBody);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
