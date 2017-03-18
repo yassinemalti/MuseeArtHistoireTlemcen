@@ -32,7 +32,7 @@ public class AccueilFragment extends Fragment {
     public static AccueilFragment newInstance(String notificationImageURL) {
         AccueilFragment fragment = new AccueilFragment();
         Bundle args = new Bundle();
-        args.putString("imageURL", notificationImageURL);
+        args.putString("imageUri", notificationImageURL);
         fragment.setArguments(args);
         return fragment;
     }
@@ -56,7 +56,7 @@ public class AccueilFragment extends Fragment {
         adBanner_1.loadAd(request_1);
 
         Bundle args = getArguments();
-        String notificationImageURL = args.getString("imageURL");
+        String notificationImageURL = args.getString("imageUri");
 
         if(notificationImageURL!=null)
             new DownloadImageTask((ImageView) rootView.findViewById(R.id.notificationImageView))

@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -34,7 +33,7 @@ public class PrincipaleActivity extends AppCompatActivity
     private boolean viewIsAtHome;
     boolean doubleBackToExitPressedOnce = false;
     private int currentViewID;
-    private String imageURL;
+    private String imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +57,8 @@ public class PrincipaleActivity extends AppCompatActivity
 
             for (String key : getIntent().getExtras().keySet()) {
                 String value = getIntent().getExtras().getString(key);
-
-                //if (key.equals("AnotherActivity") && value.equals("True")) {
-                  //  Toast.makeText(this, "Activity true!", Toast.LENGTH_LONG).show();
-                //}
-
-                if (key.equals("imageURL")) {
-                    imageURL = value;
+                if (key.equals("imageUri")) {
+                    imageUri = value;
                 }
 
             }
@@ -131,7 +125,7 @@ public class PrincipaleActivity extends AppCompatActivity
             case R.id.accueil:
                 fragment = new AccueilFragment();
                 Bundle args = new Bundle();
-                args.putString("imageURL", imageURL);
+                args.putString("imageUri", imageUri);
                 fragment.setArguments(args);
                 title  = "استقبال";
                 viewIsAtHome = true;
