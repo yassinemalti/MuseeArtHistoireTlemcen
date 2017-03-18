@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.wordpress.yassinemalti.museearthistoiretlemcen.activity.AccueilFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,6 +29,14 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
                     android:textAlignment="center"
                     android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/notificationImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/pdf_file_document" />
 
                 <ListView
                     android:layout_width="match_parent"

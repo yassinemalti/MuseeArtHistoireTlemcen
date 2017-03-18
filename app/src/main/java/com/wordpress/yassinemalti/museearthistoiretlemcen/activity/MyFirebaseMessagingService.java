@@ -70,7 +70,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //To get a Bitmap image from the URL received
         bitmap = getBitmapfromUrl(imageUri);
 
-        sendNotification(message, bitmap, TrueOrFlase);
+        sendNotification(message, imageUri, bitmap, TrueOrFlase);
 
     }
 
@@ -78,10 +78,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * Create and show a simple notification containing the received FCM message.
      */
 
-    private void sendNotification(String messageBody, Bitmap image, String TrueOrFalse) {
+    private void sendNotification(String messageBody, String imageURL, Bitmap image, String TrueOrFalse) {
         Intent intent = new Intent(this, PrincipaleActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("AnotherActivity", TrueOrFalse);
+        intent.putExtra("imageURL", imageURL);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 

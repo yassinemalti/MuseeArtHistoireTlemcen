@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -28,11 +29,10 @@ public class AccueilFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static AccueilFragment newInstance(String param1, String param2) {
+    public static AccueilFragment newInstance(String notificationImageURL) {
         AccueilFragment fragment = new AccueilFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("imageURL", notificationImageURL);
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,6 +54,13 @@ public class AccueilFragment extends Fragment {
         NativeExpressAdView adBanner_1 = (NativeExpressAdView) rootView.findViewById(R.id.adBanner_1);
         AdRequest request_1 = new AdRequest.Builder().build();
         adBanner_1.loadAd(request_1);
+
+        Bundle args = getArguments();
+        String notificationImageURL = args.getString("imageURL");
+
+        if(notificationImageURL!=null)
+            new DownloadImageTask((ImageView) rootView.findViewById(R.id.notificationImageView))
+                    .execute(notificationImageURL);
 
         return rootView;
     }

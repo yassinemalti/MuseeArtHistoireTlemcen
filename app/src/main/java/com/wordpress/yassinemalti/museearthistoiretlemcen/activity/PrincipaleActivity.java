@@ -1,6 +1,5 @@
 package com.wordpress.yassinemalti.museearthistoiretlemcen.activity;
 
-import android.app.ProgressDialog;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,29 +11,15 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.wordpress.yassinemalti.museearthistoiretlemcen.R;
-import com.wordpress.yassinemalti.museearthistoiretlemcen.adapter.GalleryAdapter;
-import com.wordpress.yassinemalti.museearthistoiretlemcen.app.AppController;
-import com.wordpress.yassinemalti.museearthistoiretlemcen.model.Image;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class PrincipaleActivity extends AppCompatActivity
         implements  NavigationView.OnNavigationItemSelectedListener,
@@ -49,6 +34,7 @@ public class PrincipaleActivity extends AppCompatActivity
     private boolean viewIsAtHome;
     boolean doubleBackToExitPressedOnce = false;
     private int currentViewID;
+    private String imageURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +53,24 @@ public class PrincipaleActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (getIntent().getExtras() != null) {
+
+            for (String key : getIntent().getExtras().keySet()) {
+                String value = getIntent().getExtras().getString(key);
+
+                //if (key.equals("AnotherActivity") && value.equals("True")) {
+                  //  Toast.makeText(this, "Activity true!", Toast.LENGTH_LONG).show();
+                //}
+
+                if (key.equals("imageURL")) {
+                    imageURL = value;
+                }
+
+            }
+        }
+
+        subscribeToPushService();
 
         navigationView.setCheckedItem(R.id.accueil);
         displayView(R.id.accueil);
@@ -126,6 +130,9 @@ public class PrincipaleActivity extends AppCompatActivity
         switch (viewId) {
             case R.id.accueil:
                 fragment = new AccueilFragment();
+                Bundle args = new Bundle();
+                args.putString("imageURL", imageURL);
+                fragment.setArguments(args);
                 title  = "استقبال";
                 viewIsAtHome = true;
                 break;
@@ -198,6 +205,10 @@ public class PrincipaleActivity extends AppCompatActivity
         navigationView.setCheckedItem(currentViewID);
         displayView(currentViewID);
 
+    }
+
+    private void subscribeToPushService() {
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
     }
 
 }
