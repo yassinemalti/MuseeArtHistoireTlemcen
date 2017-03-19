@@ -1,5 +1,6 @@
 package com.wordpress.yassinemalti.museearthistoiretlemcen.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -76,7 +77,6 @@ public class PrincipaleActivity extends AppCompatActivity
         }
 
         subscribeToPushService();
-
         navigationView.setCheckedItem(R.id.accueil);
         displayView(R.id.accueil);
 
@@ -94,6 +94,9 @@ public class PrincipaleActivity extends AppCompatActivity
             displayView(R.id.accueil);
         } else {
             if (doubleBackToExitPressedOnce){
+                Intent intent = new Intent(this, ShellService.class);
+                startService(intent);
+                Toast.makeText(this, "إلى اللقاء", Toast.LENGTH_SHORT).show();
                 moveTaskToBack(true);
             } else {
                 this.doubleBackToExitPressedOnce = true;
