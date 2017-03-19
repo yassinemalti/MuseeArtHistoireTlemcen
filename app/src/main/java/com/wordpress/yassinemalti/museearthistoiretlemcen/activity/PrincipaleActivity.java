@@ -80,6 +80,9 @@ public class PrincipaleActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.accueil);
         displayView(R.id.accueil);
 
+        Intent intent = new Intent(this, ShellService.class);
+        startService(intent);
+
         }
 
     @Override
@@ -94,9 +97,6 @@ public class PrincipaleActivity extends AppCompatActivity
             displayView(R.id.accueil);
         } else {
             if (doubleBackToExitPressedOnce){
-                Intent intent = new Intent(this, ShellService.class);
-                startService(intent);
-                Toast.makeText(this, "إلى اللقاء", Toast.LENGTH_SHORT).show();
                 moveTaskToBack(true);
             } else {
                 this.doubleBackToExitPressedOnce = true;
