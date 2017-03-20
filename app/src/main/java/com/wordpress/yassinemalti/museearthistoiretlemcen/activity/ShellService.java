@@ -27,6 +27,7 @@ public class ShellService extends Service {
             }
         };
         handler.post(runnable);
+        startService(new Intent(this, MyFirebaseMessagingService.class));
     }
 
     @Override

@@ -38,16 +38,10 @@
             android:name=".activity.ShellService"
             android:exported="false"
             android:process=":remote" >
-            <intent-filter>
-                <action android:name=".activity.ShellService" />
-            </intent-filter>
         </service>
 
-        <receiver android:name=".activity.StartFirebaseAtBoot" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" >
-                </action>
-            </intent-filter>
+        <receiver
+            android:name=".activity.StartFirebaseAtBoot" >
         </receiver>
 
         <service
