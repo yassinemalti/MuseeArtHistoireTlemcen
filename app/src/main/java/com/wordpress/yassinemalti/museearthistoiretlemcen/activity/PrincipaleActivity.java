@@ -80,8 +80,7 @@ public class PrincipaleActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.accueil);
         displayView(R.id.accueil);
 
-        Intent intent = new Intent(PrincipaleActivity.this, ShellService.class);
-        startService(intent);
+        startService(new Intent(ShellService.class.getName()));
 
         }
 
