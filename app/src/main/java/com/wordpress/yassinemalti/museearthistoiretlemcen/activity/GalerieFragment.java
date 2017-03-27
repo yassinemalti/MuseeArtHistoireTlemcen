@@ -41,7 +41,7 @@ public class GalerieFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private String TAG = PrincipaleActivity.class.getSimpleName();
-    private static final String endpoint = "http://mahtlemcen.org/json/glide.json";
+    private static final String endpoint = PrincipaleActivity.getUrlServer();
     private ArrayList<Image> images;
     private ProgressDialog pDialog;
     private GalleryAdapter mAdapter;

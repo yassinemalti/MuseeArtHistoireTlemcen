@@ -18,6 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.wordpress.yassinemalti.museearthistoiretlemcen.R;
 
@@ -37,6 +42,11 @@ public class PrincipaleActivity extends AppCompatActivity
     private String shortMessage;
     private String longMessage;
     private String imageUri;
+    private static String urlServer;
+
+    public static String getUrlServer() {
+        return urlServer;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +87,7 @@ public class PrincipaleActivity extends AppCompatActivity
         }
 
         subscribeToPushService();
+        firebaseDatabaseRefresh();
         navigationView.setCheckedItem(R.id.accueil);
         displayView(R.id.accueil);
 
@@ -216,6 +227,25 @@ public class PrincipaleActivity extends AppCompatActivity
 
     private void subscribeToPushService() {
         FirebaseMessaging.getInstance().subscribeToTopic("news");
+    }
+
+    private void firebaseDatabaseRefresh() {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("urlServer");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                urlServer = value;
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
     }
 
 }
