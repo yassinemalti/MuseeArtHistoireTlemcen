@@ -42,9 +42,9 @@ public class PrincipaleActivity extends AppCompatActivity
     private String shortMessage;
     private String longMessage;
     private String imageUri;
-    private static String urlServer;
+    private String urlServer;
 
-    public static String getUrlServer() {
+    public String getUrlServer() {
         return urlServer;
     }
 
