@@ -54,11 +54,40 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/pdf_file_document" />
+                        app:srcCompat="@drawable/phonecall" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/textViewLienJournalOfficiel_112"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="www.mahtlemcen.org"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/worldshapepublic" />
 
                 </LinearLayout>
 
@@ -83,11 +112,11 @@
 
                     <ImageView
                         android:id="@+id/imageView21"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/pdf_file_document" />
+                        app:srcCompat="@drawable/writeemail" />
 
                 </LinearLayout>
 
@@ -112,11 +141,40 @@
 
                     <ImageView
                         android:id="@+id/imageView211"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
                         android:layout_gravity="center_vertical"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/pdf_file_document" />
+                        ads:srcCompat="@drawable/facebooklogo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right"
+                    android:layoutDirection="ltr"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/textViewLienJournalOfficiel_11111"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text=" @mahtlemcen"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView21111"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        ads:srcCompat="@drawable/twitterlogo" />
 
                 </LinearLayout>
 
